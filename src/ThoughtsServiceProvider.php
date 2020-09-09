@@ -4,9 +4,8 @@ namespace Tyteck\WriteYourThoughts;
 
 use Illuminate\Support\ServiceProvider;
 
-class ThoughtsServiceProvider extends ServiceProvider{
-
-
+class ThoughtsServiceProvider extends ServiceProvider
+{
     public function boot()
     {
         //code

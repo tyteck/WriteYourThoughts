@@ -31,7 +31,7 @@
                 "Tyteck\\WriteYourThoughts\\ThoughtsServiceProvider"
             ],
             "aliases": {
-                "Thoughts": "Tyteck\\WriteYourThoughts\\Facades\\Facade\\Thoughts"
+                "Thoughts": "Tyteck\\WriteYourThoughts\\Facades\\Thoughts"
             }
         }
     }
