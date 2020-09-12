@@ -13,6 +13,7 @@ class ThoughtsController extends Controller
 
     public function index()
     {
-        return 'my thoughts';
+        $foo = 'my thoughts';
+        return view('thoughts::index', compact('foo'));
     }
 }

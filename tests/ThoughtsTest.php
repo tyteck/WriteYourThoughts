@@ -26,5 +26,8 @@ class ThoughtsTest extends \Orchestra\Testbench\TestCase
     public function testAnyoneCanListYourThoughts()
     {
         $this->get('thoughts')->assertStatus(200);
+        $this->get(route('thoughts.index'))
+            ->assertSuccessful()
+            ->assertViewIs('thoughts::index');
     }
 }
