@@ -22,7 +22,7 @@ class ThoughtsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('thoughts', function () {
-            return new Thoughts();
+            return new ThoughtsFactory();
         });
     }
 }
