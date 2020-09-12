@@ -2,13 +2,29 @@
 
 namespace Tyteck\WriteYourThoughts\Tests;
 
-use PHPUnit\Framework\TestCase;
+use Tyteck\WriteYourThoughts\Thoughts;
+use Tyteck\WriteYourThoughts\ThoughtsServiceProvider;
 
-class ThoughtsTest extends TestCase {
+class ThoughtsTest extends \Orchestra\Testbench\TestCase
+{
 
-    public function testFoo()
+    protected function getPackageProviders($app)
     {
-        $this->assertTrue(true);
+        return [
+            ThoughtsServiceProvider::class,
+        ];
+    }
+
+    protected function getPackageAliases($app)
+    {
+        return [
+            'Thoughts' => Thoughts::class,
+        ];
+    }
+
+
+    public function testAnyoneCanListYourThoughts()
+    {
+        $this->get('thoughts')->assertStatus(200);
     }
 }
-
